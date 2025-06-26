@@ -25,6 +25,8 @@ export default function Navbar() {
               <Link href="/case-studies" className="text-white hover:underline">Case Studies</Link>
               <Link href="/contact" className="text-white hover:underline">Contact</Link>
             </div>
+
+            {/* Grid Icon Button */}
             <div>
               <button
                 className="p-2 bg-gradient-to-r from-[#4E3682] to-[#A890CD] rounded-md hover:bg-white/20 relative z-20"
@@ -43,30 +45,10 @@ export default function Navbar() {
                   <rect x="18.752" y="19.035" width="12.1045" height="12.1045" rx="2" stroke="white" strokeWidth="2" />
                 </svg>
               </button>
-
-              {overlayOpen && (
-                <div className="fixed inset-0 bg-[#0e061e]/90 backdrop-blur-sm z-50 flex flex-col justify-center items-center">
-                  <button
-                    onClick={() => setOverlayOpen(false)}
-                    className="absolute top-6 right-6 text-white text-4xl font-bold cursor-pointer hover:text-purple-400 transition-colors"
-                  >
-                    &times;
-                  </button>
-
-                  <div className="space-y-6 text-white text-2xl font-semibold text-center animate-fade-slide">
-                    <Link href="/" onClick={() => setOverlayOpen(false)} className="block hover:text-purple-400">Home</Link>
-                    <Link href="/about" onClick={() => setOverlayOpen(false)} className="block hover:text-purple-400">About</Link>
-                    <Link href="/case-studies" onClick={() => setOverlayOpen(false)} className="block hover:text-purple-400">Case Studies</Link>
-                    <Link href="/career" onClick={() => setOverlayOpen(false)} className="block hover:text-purple-400">Career</Link>
-                    <Link href="/contact" onClick={() => setOverlayOpen(false)} className="block hover:text-purple-400">Contact</Link>
-                    <Link href="/blog" onClick={() => setOverlayOpen(false)} className="block hover:text-purple-400">Blog</Link>
-                  </div>
-                </div>
-              )}
             </div>
           </nav>
 
-          {/* Hamburger Icon */}
+          {/* Hamburger Icon for mobile */}
           <div className="md:hidden">
             <button
               type="button"
@@ -104,11 +86,40 @@ export default function Navbar() {
           <Link href="/career" className="block text-white hover:underline" onClick={() => setMenuOpen(false)}>Career</Link>
           <Link href="/case-studies" className="block text-white hover:underline" onClick={() => setMenuOpen(false)}>Case Studies</Link>
           <Link href="/contact" className="block text-white hover:underline" onClick={() => setMenuOpen(false)}>Contact</Link>
-          <button className="p-2 bg-white/10 rounded-md hover:bg-white/20 flex items-center">
-            <svg className="w-5 h-5 fill-white" viewBox="0 0 24 24">
-              <path d="M3 3h4v4H3V3zm7 0h4v4h-4V3zm7 0h4v4h-4V3zM3 10h4v4H3v-4zm7 0h4v4h-4v-4zm7 0h4v4h-4v-4zM3 17h4v4H3v-4zm7 0h4v4h-4v-4zm7 0h4v4h-4v-4z" />
-            </svg>
-          </button>
+        </div>
+      </div>
+
+      {/* Animated Overlay Menu */}
+      <div
+        className={`fixed inset-0 z-50 flex flex-col justify-center items-center transition-all duration-500 ease-in-out transform ${
+          overlayOpen ? 'opacity-100 scale-100 visible bg-[#0e061e]/90 backdrop-blur-sm' : 'opacity-0 scale-90 invisible'
+        }`}
+      >
+        <button
+          onClick={() => setOverlayOpen(false)}
+          className="absolute top-6 right-6 text-white text-4xl font-bold cursor-pointer hover:text-purple-400 transition-colors"
+        >
+          &times;
+        </button>
+
+        <div className="space-y-6 text-white text-2xl font-semibold text-center transition-all duration-700 ease-out">
+          {[
+            { name: 'Home', path: '/' },
+            { name: 'About', path: '/about' },
+            { name: 'Case Studies', path: '/case-studies' },
+            { name: 'Career', path: '/career' },
+            { name: 'Contact', path: '/contact' },
+            { name: 'Blog', path: '/blog' }
+          ].map(({ name, path }) => (
+            <Link
+              key={name}
+              href={path}
+              onClick={() => setOverlayOpen(false)}
+              className="block hover:text-purple-400 transition-transform duration-300 transform hover:scale-110"
+            >
+              {name}
+            </Link>
+          ))}
         </div>
       </div>
     </header>
