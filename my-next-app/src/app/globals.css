@@ -72,4 +72,9 @@ body {
 .hover\:rotate-x-180:hover {
   transform: rotateX(180deg);
 }
+html, body {
+  overscroll-behavior: none;
+  scroll-behavior: auto; /* let ScrollSmoother take over */
+  overflow-x: hidden;
+}
 
