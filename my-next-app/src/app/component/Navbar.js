@@ -7,7 +7,7 @@ export default function Navbar() {
 const [overlayOpen, setOverlayOpen] = useState(false);
 
   return (
-    <header className="text-white   relative z-20 ">
+    <header className="text-white   absolute z-20  w-full ">
       <div   className=''>
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center  relative z-30">
         {/* Logo */}

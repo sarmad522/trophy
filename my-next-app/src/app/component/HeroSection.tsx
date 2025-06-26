@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function HeroSection() {
   return (
    <section
-  className="relative bg-gradient-to-r from-[#2e014c] to-black text-white pt-32 pb-32 flex items-center"
+  className="relative bg-gradient-to-r from-[#2e014c] to-black text-white pt-32 pb-32 flex items-center m-h-screen"
   style={{
     backgroundImage: "url('/images/herosectio.png')",
     backgroundSize: "cover",

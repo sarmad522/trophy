@@ -50,3 +50,26 @@ body {
         0% { transform: rotate(0deg); }
         100% { transform: rotate(360deg); }
       }
+
+
+      /* styles/globals.css */
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-x-180 {
+  transform: rotateX(180deg);
+}
+
+.hover\:rotate-x-180:hover {
+  transform: rotateX(180deg);
+}
+
