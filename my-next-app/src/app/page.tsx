@@ -9,7 +9,7 @@ import ScrollSmoother from 'gsap/dist/ScrollSmoother';
 
 import HeroSection from './component/HeroSection';
 import ScrollGradientText from './component/ScrollGradientText';
-import CustomSlider from './component/ServicesSlider';
+// import CustomSlider from './component/ServicesSlider';
 import AboutUsScroll from './component/AboutUsScroll';
 import ScrollTextFade from './component/ScrollTextFade';
 import FlipCard from "./component/FlipCard";
@@ -17,6 +17,8 @@ import MissionScrollText from "./component/MissionScrollText";
 // import MissionVisionSection from "./component/MissionVisionSection";
 import CreativeSection from "./component/CreativeSection";
 import  MissionVisionScrollText from "./component/MissionVisionScrollText";
+import RotatingCardSlider from "./component/RotatingCardSlider";
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function Home() {
@@ -35,9 +37,11 @@ export default function Home() {
     <div id="smooth-wrapper">
       <div id="smooth-content">
         <div className="">
+          
           <HeroSection />
           <ScrollGradientText />
-          <CustomSlider />
+          {/* <CustomSlider /> */}
+          <RotatingCardSlider/>
           <div
             style={{
               backgroundImage: "url('/images/textbag.png')",
