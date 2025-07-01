@@ -17,7 +17,7 @@ const GsapScrollSlideText: React.FC = () => {
 
     // set initial text color
     Array.from(track.children).forEach((el: any) => {
-      el.style.color = '#A890CD';
+      el.style.color = '#6C54A0';
     });
 
     // calculate actual scroll distance
@@ -46,8 +46,8 @@ const GsapScrollSlideText: React.FC = () => {
   }, []);
 
   return (
-    <div ref={wrapperRef} className="h-[40vh] bg-black">
-      <div className="sticky top-0 h-screen overflow-hidden">
+    <div ref={wrapperRef} className="bg-transparent">
+      <div className=" ">
         <div
           ref={trackRef}
           className="flex flex-nowrap"
