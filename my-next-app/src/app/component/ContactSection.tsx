@@ -13,13 +13,13 @@ const ContactSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold leading-snug mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold leading-snug mb-6 text-start">
             Ready to discuss <br />
             your project with us?
           </h2>
           <a
             href="mailto:contact@throov.com"
-            className="text-blue-400 text-xl font-medium underline hover:text-blue-300 transition"
+            className="text-blue-400 text-xl font-medium underline hover:text-blue-300 transition text-start"
           >
             contact@throov.com
           </a>
@@ -68,7 +68,7 @@ const ContactSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-pink-500 hover:to-purple-600 transition-colors text-white font-semibold px-6 py-3 rounded-full shadow-md"
+            className="bg-gradient-to-b from-[#4E3682] to-[#A890CD] hover:from-pink-500 hover:to-purple-600 transition-colors text-white font-semibold px-6 py-3 rounded-full shadow-md"
           >
             Send Message
           </motion.button>

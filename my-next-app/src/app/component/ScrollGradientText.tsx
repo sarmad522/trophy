@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
+import RotatingCardSlider from './RotatingCardSlider';
 gsap.registerPlugin(ScrollTrigger);
 
 const GsapScrollSlideText: React.FC = () => {
@@ -75,6 +75,7 @@ const GsapScrollSlideText: React.FC = () => {
           </div>
         </div>
       </div>
+      <RotatingCardSlider />
     </div>
   );
 };

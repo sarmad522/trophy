@@ -10,16 +10,17 @@ import ScrollSmoother from 'gsap/dist/ScrollSmoother';
 import HeroSection from './component/HeroSection';
 import ScrollGradientText from './component/ScrollGradientText';
 // import CustomSlider from './component/ServicesSlider';
-import AboutUsScroll from './component/AboutUsScroll';
-import ScrollTextFade from './component/ScrollTextFade';
+// import AboutUsScroll from './component/AboutUsScroll';
+// import ScrollTextFade from './component/ScrollTextFade';
 import FlipCard from "./component/FlipCard";
 import MissionScrollText from "./component/MissionScrollText";
 // import MissionVisionSection from "./component/MissionVisionSection";
 import CreativeSection from "./component/CreativeSection";
 import  MissionVisionScrollText from "./component/MissionVisionScrollText";
-import RotatingCardSlider from "./component/RotatingCardSlider";
+// import RotatingCardSlider from "./component/RotatingCardSlider";
 import WhereWeWork from "./component/WhereWeWork";
-import ContactSection from "./component/ContactSection";
+import Footer from './component/Footer';
+
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function Home() {
@@ -42,7 +43,7 @@ export default function Home() {
           <HeroSection />
           <ScrollGradientText />
           {/* <CustomSlider /> */}
-          <RotatingCardSlider/>
+          {/* <RotatingCardSlider/> */}
           <div
             style={{
               backgroundImage: "url('/images/textbag.png')",
@@ -50,8 +51,8 @@ export default function Home() {
               backgroundPosition: "center",
             }}
           >
-            <AboutUsScroll />
-            <ScrollTextFade />
+            {/* <AboutUsScroll />
+            <ScrollTextFade /> */}
           </div>
           <main className="flex items-center justify-center gap-8 p-10 bg-black">
             <FlipCard
@@ -64,6 +65,22 @@ export default function Home() {
                 "Prototypes",
                 "Minimum Viable Products",
               ]}
+              frontImage="/images/wprdout.png"
+              backImage="/images/blue.png"
+            />
+            <FlipCard
+              title="Develop"
+              items={[
+                "Frontend Development",
+                "Backend Development",
+                "CMS Implementation",
+                "Accessibility",
+                "Interaction and Motion",
+                "Lowcode Development",
+                
+              ]}
+              frontImage="/images/work2image.png"
+              backImage="/images/blue.png"
             />
             <FlipCard
               title="Develop"
@@ -75,17 +92,8 @@ export default function Home() {
                 "Interaction and Motion",
                 "Lowcode Development",
               ]}
-            />
-            <FlipCard
-              title="Develop"
-              items={[
-                "Frontend Development",
-                "Backend Development",
-                "CMS Implementation",
-                "Accessibility",
-                "Interaction and Motion",
-                "Lowcode Development",
-              ]}
+              frontImage="/images/worflikp.png"
+              backImage="/images/blue.png"
             />
           </main>
           <div
@@ -103,7 +111,8 @@ export default function Home() {
           <div>
             <CreativeSection />
             <WhereWeWork/>
-            <ContactSection/>
+            {/* <ContactSection/> */}
+            <Footer/>
           </div>
         </div>
       </div>

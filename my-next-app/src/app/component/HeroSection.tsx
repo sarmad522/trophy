@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { motion } from 'framer-motion';
 export default function HeroSection() {
  const svgRef = useRef<SVGSVGElement>(null);
 
@@ -88,7 +89,7 @@ export default function HeroSection() {
         {/* Glossy 3D Object */}
          <img
           src="/images/videoMain.gif"
-          className="absolute right-[0%] top-[10%] w-[180px] md:w-[250px] lg:w-[500px] z-10 "
+          className="absolute right-[-10%] top-[10%] w-[180px] md:w-[250px] lg:w-[700px] z-10 "
           alt="Throoy Logo"
         />
         {/* <video
@@ -113,11 +114,13 @@ export default function HeroSection() {
     <path d="M26.04 28.6199L18.5874 36.0725L11.1348 28.6199" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
   </svg>
 </a>
-      <img
-  src="/images/framerimage.png"
-  alt="Throoy Logo"
-  className="absolute bottom-[-100px] right-0 w-full max-w-[200px] sm:max-w-[200px] rotate-[0deg] z-99"
-/>
+  <motion.img
+      src="/images/imagebanner.png"
+      alt="Throoy Logo"
+      className="absolute bottom-[-100px] right-[-150px] w-full max-w-[500px] sm:max-w-[200px] lg:max-w-[350px] z-50"
+      animate={{ rotate: 360 }}
+      transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
+    />
     </section>
   );
 }
