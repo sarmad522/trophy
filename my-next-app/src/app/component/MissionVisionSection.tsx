@@ -73,7 +73,7 @@ const MissionVisionSection = () => {
   ));
 
   return (
-    <section className="bg-black">
+    <section className=" " id='down'>
       {/* Horizontal Heading Scroll */}
       <div ref={headingWrapperRef} className="h-[40vh]">
         <div className="sticky top-0 h-screen overflow-hidden">

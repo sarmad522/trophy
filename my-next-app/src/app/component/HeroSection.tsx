@@ -86,6 +86,11 @@ export default function HeroSection() {
         </div>
         </div>
         {/* Glossy 3D Object */}
+         <img
+          src="/images/videoMain.gif"
+          className="absolute right-[0%] top-[10%] w-[180px] md:w-[250px] lg:w-[500px] z-10 "
+          alt="Throoy Logo"
+        />
         {/* <video
             autoPlay
             loop
@@ -101,7 +106,7 @@ export default function HeroSection() {
 
 
       </div>
-      <a href="#about" className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+      <a href="#down" className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
   <svg xmlns="http://www.w3.org/2000/svg" width="37" height="53" viewBox="0 0 37 53" fill="none">
     <path d="M1.19727 34.0851C1.19727 38.6971 3.02947 43.1205 6.29062 46.3815C9.55179 49.6428 13.9748 51.4744 18.5867 51.4744C23.1987 51.4744 27.6218 49.6428 30.8831 46.3815C34.1441 43.1205 35.9762 38.6971 35.9762 34.0851V19.1799C35.9762 14.5679 34.1441 10.1449 30.8831 6.88376C27.6218 3.62261 23.1987 1.79041 18.5867 1.79041C13.9748 1.79041 9.55179 3.62261 6.29062 6.88376C3.02947 10.1449 1.19727 14.5679 1.19727 19.1799V34.0851Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     <path d="M18.5859 14.9072V34.7809" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
