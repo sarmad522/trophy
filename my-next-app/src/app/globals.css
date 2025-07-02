@@ -78,3 +78,18 @@ html, body {
   overflow-x: hidden;
 }
 
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 0px #4E3682;
+  }
+  50% {
+    box-shadow: 0 0 20px #4E3682, 0 0 40px #4E3682;
+  }
+  100% {
+    box-shadow: 0 0 0px #4E3682;
+  }
+}
+
+.animate-borderGlow {
+  animation: borderGlow 2s infinite;
+}

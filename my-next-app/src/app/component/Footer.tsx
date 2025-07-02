@@ -57,9 +57,14 @@ const Footer = () => {
       </div>
 
       {/* Logo at Bottom */}
-      <div className="text-center mt-20 text-white text-[48px] font-bold tracking-widest uppercase">
+      {/* <div className="text-center mt-20 text-white text-[100px] font-bold tracking-widest uppercase">
         throov
-      </div>
+      </div> */}
+       <img
+          src="/images/logoimage.png"
+          className="w-full max-w-[1200px] mb-4 block mx-auto"
+          alt="Throoy Logo"
+        />
     </footer>
   );
 };

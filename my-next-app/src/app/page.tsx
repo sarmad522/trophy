@@ -19,6 +19,7 @@ import CreativeSection from "./component/CreativeSection";
 import  MissionVisionScrollText from "./component/MissionVisionScrollText";
 // import RotatingCardSlider from "./component/RotatingCardSlider";
 import WhereWeWork from "./component/WhereWeWork";
+import PartnersSlider from "./component/PartnersSlider";
 import Footer from './component/Footer';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -112,6 +113,7 @@ export default function Home() {
             <CreativeSection />
             <WhereWeWork/>
             {/* <ContactSection/> */}
+            <PartnersSlider/>
             <Footer/>
           </div>
         </div>
