@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const ContactSection = () => {
   return (
-    <section className=" text-white py-24 px-6">
+    <section className="     text-white py-24 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
         {/* Left Section */}
         <motion.div
