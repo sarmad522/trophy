@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { Fancybox as NativeFancybox } from '@fancyapps/ui';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
-import ContactSection from "./ContactSection";
+import ContactSection from './ContactSection';
 
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -31,18 +31,14 @@ const locations = [
 const WhereWeWork = () => {
   const paragraphRef = useRef<HTMLParagraphElement>(null);
 
-  // Fancybox binding
+  // ✅ Fancybox binding
   useEffect(() => {
-    NativeFancybox.bind('[data-fancybox="gallery"]', {
-      animated: true,
-      showClass: 'f-fadeIn',
-      hideClass: 'f-fadeOut',
-      dragToClose: true,
-      Images: {
-        zoom: true,
-      },
+    (NativeFancybox as any).bind('[data-fancybox="gallery"]', {
       Thumbs: {
         autoStart: true,
+      },
+      Toolbar: {
+        display: ['zoom', 'close', 'fullscreen', 'thumbs'],
       },
     });
 
@@ -51,7 +47,7 @@ const WhereWeWork = () => {
     };
   }, []);
 
-  // GSAP Scroll color animation
+  // ✅ GSAP scroll-triggered word color animation
   useEffect(() => {
     const paragraph = paragraphRef.current;
     if (!paragraph) return;
@@ -78,14 +74,13 @@ const WhereWeWork = () => {
     };
   }, []);
 
-  // Paragraph splitting into word spans
   const paragraph = `Based in Karachi, our core team brings a global perspective to every project. We proudly collaborate with clients around the world, combining creative insight with streamlined remote processes to ensure smooth communication and seamless delivery, no matter where you are.`;
 
   const renderWords = paragraph.split(' ').map((word, index) => (
     <span
       key={index}
       className="word inline-block mr-1 will-change-[color]"
-      style={{ color: '#4B4B4B' }} // initial gray
+      style={{ color: '#4B4B4B' }} // Initial gray
     >
       {word}
     </span>
@@ -116,14 +111,18 @@ const WhereWeWork = () => {
         ))}
       </div>
 
-      {/* Animated Paragraph */}
+      {/* GSAP animated paragraph */}
       <p
         ref={paragraphRef}
         className="max-w-3xl mx-auto text-lg leading-relaxed flex flex-wrap gap-y-2 justify-center"
       >
         {renderWords}
       </p>
-      <ContactSection/>
+
+      {/* Contact Form Component */}
+      <div className="mt-20">
+        <ContactSection />
+      </div>
     </section>
   );
 };
