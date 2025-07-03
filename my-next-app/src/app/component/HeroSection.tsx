@@ -25,7 +25,7 @@ export default function HeroSection() {
 }, []);
 
   return (
-    <section className="relative  text-white pt-56 pb-32   flex flex-col justify-center items-start ">
+    <section className="relative  text-white pt-56 pb-32   flex flex-col justify-center items-start  h-screen">
       {/* Left Overlay */}
       <img
         src="/images/heroleftlayer.png"
@@ -117,7 +117,7 @@ export default function HeroSection() {
   <motion.img
       src="/images/imagebanner.png"
       alt="Throoy Logo"
-      className="absolute bottom-[-100px] right-[-150px] w-full max-w-[500px] sm:max-w-[200px] lg:max-w-[350px] z-50"
+      className="absolute bottom-[-100px] right-[-10%] w-full max-w-[500px] sm:max-w-[200px] lg:max-w-[300px] z-50"
       animate={{ rotate: 360 }}
       transition={{ repeat: Infinity, duration: 10, ease: 'linear' }}
     />
